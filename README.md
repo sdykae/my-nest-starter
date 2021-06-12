@@ -21,3 +21,4 @@ Extra libraries:
 - "class-validator"
 - "mongoose"
 - "swagger-ui-express"
+- "@nestjs/swagger"

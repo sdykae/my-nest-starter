@@ -7,9 +7,9 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "ttsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "nodemon --watch \"src/**\" --ext \"ts,json,env\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/main.ts\"",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@nestjs/common": "7.6.17",
+    "@nestjs/config": "0.6.3",
     "@nestjs/core": "7.6.17",
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "7.6.17",
@@ -32,7 +33,8 @@
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "7.1.0",
-    "swagger-ui-express": "4.1.6"
+    "swagger-ui-express": "4.1.6",
+    "ts-transformer-keys": "0.4.3"
   },
   "devDependencies": {
     "@nestjs/cli": "7.6.0",
@@ -48,15 +50,22 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "jest": "27.0.4",
+    "nodemon": "2.0.7",
     "prettier": "2.3.1",
     "supertest": "6.1.3",
     "ts-jest": "27.0.3",
     "ts-loader": "9.2.3",
     "ts-node": "10.0.0",
     "tsconfig-paths": "3.9.0",
+    "ttypescript": "1.5.12",
     "typescript": "4.3.2"
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "compiler": "ttypescript"
+      }
+    },
     "moduleFileExtensions": [
       "js",
       "json",

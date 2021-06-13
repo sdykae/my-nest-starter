@@ -22,3 +22,9 @@ Extra libraries:
 - "mongoose"
 - "swagger-ui-express"
 - "@nestjs/swagger"
+- "@nestjs/config"
+- "ts-transformer-keys"
+
+Extra dev-libraries
+- "ts-node"
+- "nodemon"

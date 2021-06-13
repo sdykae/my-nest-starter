@@ -1,7 +1,5 @@
-Nest js from
-`
-nest new app
-`
+Nest js from `nest new app` with the usual configuration already done.
+
 Requires:
 - mongodb instance somewhere
 - Configuration file `src/config/dev.env` for node uri

@@ -29,3 +29,4 @@ Extra libraries:
 Extra dev-libraries
 - "ts-node"
 - "nodemon"
+- "ttypescript"

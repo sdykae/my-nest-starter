@@ -2,6 +2,9 @@ Nest js from
 `
 nest new app
 `
+Requires:
+- mongodb instance somewhere
+- Configuration file `src/config/dev.env` for node uri
 
 Plus: 
 - Update every dependencie to latest 06/12/2020
